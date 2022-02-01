@@ -1,0 +1,253 @@
+* {
+  margin: auto;
+  padding: 5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: stickman;
+  src: url(stickmanroughfancy-yzavo-webfont.woff);
+}
+
+body {
+  margin: 0;
+}
+
+
+
+page {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  width: 100%;
+  /* background-color: rgb(3, 1, 12); */
+  background-color: #023618;
+  flex-wrap: wrap;
+  background-image: url(/UberWald/UberWaldScreenShot.PNG);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  /* background-color: #4A6C6F; */
+  width: 100%;
+  flex: 1 0 10vh;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
+.navbar-nav {
+  font-size: 2em;
+}
+
+main {
+  /* display: flex; */
+  flex: 1 0 80vh;
+  background-color: #210124;
+  color: #F7F9F7;
+  min-width: 70%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.email-collection{
+  align-self: center;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+.social-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-container image {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  line-height: 150%;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+article h1, h2 {
+  font-family: de-walpergens-pica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: .5em;
+  margin-top: 1em;
+}
+
+article h1 {
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+article h2 {
+  color:#8FD694
+}
+
+article p {
+  font-family: de-walpergens-pica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1em;
+  max-width: 800px;
+}
+
+.btn-primary {
+  background-color: #63064f;
+  
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  flex: 1 0 10vh;
+  width: 100%;
+  background-color: #4A6C6F;
+}
+
+footer a {
+  color:#210124
+}
+
+.splashCTA {
+  animation: infinite linear;
+  position: relative;
+  display: flex;
+  width: 10em;
+  height: 1.25em;
+  font-size: 2em;
+  margin-bottom: 1em;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+  color: white;
+  border-radius: 10px;
+}
+
+.splashCTA p {
+  margin-top: .25em;
+}
+
+.splashCTA:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #B10F2E,
+    #4A6C6F,
+    #8FD694,
+    #63064f,
+    #B10F2E
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.splashCTA:active {
+  color: rgb(0, 0, 0);
+}
+
+.splashCTA:active:after {
+  background: transparent;
+}
+
+.splashCTA:hover:before {
+  opacity: 1;
+}
+
+.splashCTA:hover{
+  text-decoration: none;
+}
+
+.splashCTA:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #B10F2E;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  color: white;
+}
+
+.splashCTA {
+  color: white;
+  font-style: inherit;
+}
+
+.description-container {
+  border: #8FD694;
+  border-width: 15px;
+  border-radius: 5px;
+  border-style: inset;
+}
+.description-container p {
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+
+
+
+@media only screen and (max-width: 450px) {
+  page {
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    background-color: none;
+  }
+
+  body {
+    background-image: url(/UberWald/UberWaldScreenShot.PNG);
+  }
+  
+
+}
